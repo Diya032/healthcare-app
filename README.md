@@ -50,20 +50,20 @@ healthcare-system/
 
 * __init__.py rules:
 
-  ** Add inside app/ and its subfolders (routers/, notifications/, etc.) → needed to treat them as packages.
+  * Add inside app/ and its subfolders (routers/, notifications/, etc.) → needed to treat them as packages.
   
-  ** Do not add at service root (patient_service/, appointments_service/) → services talk via REST, not imports.
+  * Do not add at service root (patient_service/, appointments_service/) → services talk via REST, not imports.
   
-  ** Do not add in infra/ or frontend/.
+  * Do not add in infra/ or frontend/.
 
 * requirements.txt:
 
-  ** Each service has its own → for deployment into its own App Service.
+  * Each service has its own → for deployment into its own App Service.
   
-  ** Root requirements.txt → optional, for dev dependencies (pytest, black, mypy, etc.).
+  * Root requirements.txt → optional, for dev dependencies (pytest, black, mypy, etc.).
 
 * Service extensibility:
 
-  ** Appointments service can extend with notifications/ or other modules.
+  * Appointments service can extend with notifications/ or other modules.
 
-  ** Use patient service as a reference baseline.
+  * Use patient service as a reference baseline.
