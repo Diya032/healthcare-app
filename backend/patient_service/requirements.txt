@@ -1,0 +1,2 @@
+# Python dependencies (FastAPI, SQLAlchemy, etc.). 
+# Dependencies for this service only  
