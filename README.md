@@ -1,7 +1,8 @@
 # healthcare-app
 
-Repo Structure (Reference)
+ ## Repo Structure (Reference)
 
+''' bash
 healthcare-system/
 │
 ├── infra/                         # Infrastructure as code (Bicep/Terraform/ARM, deployment scripts)
@@ -45,7 +46,7 @@ healthcare-system/
 
 
 
-Notes for the Team
+## Notes for the Team
 
 * __init__.py rules:
 
@@ -57,12 +58,12 @@ Notes for the Team
 
 * requirements.txt:
 
-Each service has its own → for deployment into its own App Service.
+  ** Each service has its own → for deployment into its own App Service.
+  
+  ** Root requirements.txt → optional, for dev dependencies (pytest, black, mypy, etc.).
 
-Root requirements.txt → optional, for dev dependencies (pytest, black, mypy, etc.).
+* Service extensibility:
 
-Service extensibility:
+  ** Appointments service can extend with notifications/ or other modules.
 
-Appointments service can extend with notifications/ or other modules.
-
-Use patient service as a reference baseline.
+  ** Use patient service as a reference baseline.
