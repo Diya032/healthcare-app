@@ -2,7 +2,7 @@
 
  ## Repo Structure (Reference)
 
-''' bash
+```bash
 healthcare-system/
 │
 ├── infra/                         # Infrastructure as code (Bicep/Terraform/ARM, deployment scripts)
