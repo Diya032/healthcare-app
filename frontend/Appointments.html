@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Appointment</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: rgb(69, 179, 179);
+    }
+
+    /* Header */
+    header {
+      background-color: #B5EAD7; /* dark teal */
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      color: #034d4d;
+      margin: 0;
+      font-size: 24px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li {
+      display: inline;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #034d4d; /* light teal */
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #026d6d; /* soft orange on hover */
+    }
+    .bounce-hover {
+      display: inline-block;
+      transition: transform 0.2s ease;
+    }
+
+    .bounce-hover:hover {
+      animation: bounce 0.6s ease;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-8px); }
+      60% { transform: translateY(-4px); }
+    }
+
+    /* Appointment Box */
+    .appointment-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+
+    .appointment-box {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0px 6px 15px rgba(0,0,0,0.15);
+      width: 400px;
+      text-align: center;
+    }
+
+    .appointment-box h2 {
+      color: #004d40;
+      margin-bottom: 20px;
+    }
+
+    .appointment-box label {
+      color: #034d4d;
+      font-weight: bold;
+      display: block;
+      text-align: left;
+      margin-bottom: 5px;
+    }
+
+    .appointment-box input,
+    .appointment-box select {
+      color: #004d40;
+      border: 1px solid #80deea;
+      padding: 10px;
+      border-radius: 5px;
+      width: 100%;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+    }
+
+    .appointment-box input::placeholder {
+      color: #004d40;
+    }
+
+    .appointment-box button {
+      background: #0097a7;
+      color: #ffffff;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      width: 100%;
+    }
+
+    .appointment-box button:hover {
+      background: #00796b;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>HealthCare+</h1>
+    <nav>
+      <ul>
+        <li><a href="Homepage.html" class="bounce-hover">Home</a></li>
+        <li><a href="AboutUs.html" class="bounce-hover">About Us</a></li>
+        <li><a href="services.html" class="bounce-hover">Services</a></li>
+        <li><a href="contact.html" class="bounce-hover">Contact</a></li>
+        <li><a href="Login1.html" class="bounce-hover">Login</a></li>
+        <li><a href="Register.html" class="bounce-hover">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Appointment Form -->
+  <div class="appointment-container">
+    <div class="appointment-box">
+      <h2>Book Appointment</h2>
+
+      <form>
+        <!-- Patient Name -->
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" placeholder="Enter your full name" required>
+
+        <!-- Email -->
+        <label for="email">Email ID:</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+        
+        <label for="phone">Phone number: </label>
+        <input type="text" name="phone" placeholder="Phone Number" required>
+
+        <!-- Department Dropdown -->
+        <label for="department">Department:</label>
+        <select id="department" required>
+          <option value="">-- Select Department --</option>
+          <option>Cardiology</option>
+          <option>Neurology</option>
+          <option>Orthopedics</option>
+          <option>Pediatrics</option>
+          <option>Dermatology</option>
+        </select>
+
+        <!-- Date -->
+        <label for="date">Select Date:</label>
+        <input type="date" id="date" required>
+
+        <!-- Time Slot -->
+        <label for="time">Select Time Slot:</label>
+        <select id="time" required>
+          <option value="">-- Select Time --</option>
+          <option>09:00 AM - 10:00 AM</option>
+          <option>10:00 AM - 11:00 AM</option>
+          <option>11:00 AM - 12:00 PM</option>
+          <option>02:00 PM - 03:00 PM</option>
+          <option>03:00 PM - 04:00 PM</option>
+          <option>04:00 PM - 05:00 PM</option>
+        </select>
+
+        <!-- Submit -->
+        <button type="submit">Book Appointment</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
